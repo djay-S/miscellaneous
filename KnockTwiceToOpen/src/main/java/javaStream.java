@@ -43,7 +43,7 @@ public class javaStream {
 		}
 		System.out.println(countryLMap);
 		countryLMap = new LinkedHashMap<String, String>();
-		countryLMap.putAll(list.stream().collect(Collectors.toMap(kM ->kM.get(k), vM -> vM.get(v), (e1, e2) -> e1, LinkedHashMap::new)));
+		countryLMap.putAll((Map<? extends String, ? extends String>) list.stream().collect(Collectors.toMap(kM ->kM.get(k), vM -> vM.get(v), (e1, e2) -> e1, LinkedHashMap::new)));
 		System.out.println(countryLMap);
 		
 		countryLMap = new LinkedHashMap<String, String>();
